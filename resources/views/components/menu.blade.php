@@ -15,9 +15,7 @@
         </a>
         <div class="collapse" id="ui-basic">
             <ul class="nav flex-column sub-menu">
-            <li class="nav-item"> <a class="nav-link" href="pages/ui-features/buttons.html">Usuarios</a></li>
-            <li class="nav-item"> <a class="nav-link" href="pages/ui-features/dropdowns.html">..........</a></li>
-            <li class="nav-item"> <a class="nav-link" href="pages/ui-features/typography.html">..........</a></li>
+            <li class="nav-item"> <a class="nav-link" href="/users">Usuarios</a></li>
             </ul>
         </div>
         </li>
