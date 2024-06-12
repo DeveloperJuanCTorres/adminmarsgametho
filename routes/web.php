@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\JuegoController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -19,4 +20,5 @@ Route::middleware([
 
 Route::middleware(['auth'])->group(function(){
     Route::get('/users', [AdminController::class, 'users']);
+    Route::get('/juegos', [JuegoController::class, 'index']);
 });

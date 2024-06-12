@@ -298,7 +298,7 @@
                               <h1 class="text-primary">S/. 34040</h1>
                               <h3 class="font-weight-500 mb-xl-4 text-primary">Perú</h3>
                               <p class="mb-2 mb-xl-0">
-El número total de sesiones dentro del rango de fechas. Es el período en el que un usuario participa activamente en su sitio web, página o aplicación, etc.</p>
+                                El número total de sesiones dentro del rango de fechas. Es el período en el que un usuario participa activamente en su sitio web, página o aplicación, etc.</p>
                             </div>  
                             </div>
                           <div class="col-md-12 col-xl-9">

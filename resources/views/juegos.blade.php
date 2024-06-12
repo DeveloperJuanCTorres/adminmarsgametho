@@ -180,119 +180,40 @@
                 <div class="col-md-12 grid-margin stretch-card">
                 <div class="card">
                     <div class="card-body">
-                    <p class="card-title">Gestión de Usuarios</p>
+                    <p class="card-title">Lista de Juegos</p>
+                    <div>
+                        <button class="btn btn-primary" style="float: right;margin-top: -50px;">Añadir</button>
+                    </div>
+                    
                     <div class="row">
                         <div class="col-12">
                         <div class="table-responsive">
                             <table id="example" class="display expandable-table" style="width:100%">
                                 <thead>
                                     <tr>
-                                    <th>Codigo</th>
-                                    <th>UserName</th>
-                                    <th>Nombre</th>
-                                    <th>Edad</th>
-                                    <th>Teléfono</th>
-                                    <th>Email</th>
-                                    <th></th>
+                                    <th>Id</th>
+                                    <th>Juego</th>
+                                    <th>Descripcion</th>
+                                    <th>Imagen</th>
+                                    <th>Opciones</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach($usuarios as $key => $item)
+                                    @if($juegos->count()==0)
+                                    <tr>
+                                        <td colspan="5" class="text-center">No hay datos registrados</td>
+                                    </tr>
+                                    @endif
+                                    @foreach($juegos as $key => $item)                                    
                                     <tr>
                                         <td>{{$item->id}}</td>
-                                        <td>{{$item->username}}</td>
                                         <td>{{$item->name}}</td>
-                                        <td>{{$item->edad}}</td>
-                                        <td>{{$item->telefono}}</td>
-                                        <td>{{$item->email}}</td>
-                                        <td>
-                                            <a class="btn btn-primary" data-toggle="collapse" href="#collapse{{$key}}" role="button" aria-expanded="false" aria-controls="collapse{{$key}}">
-                                                Detalle
-                                            </a>                                            
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="collapse" id="collapse{{$key}}" cellpadding="5" colspan="7">
-                                            <table cellspacing="0" border="0" style="width:100%;">
-                                                <tr class="expanded-row">
-                                                    <td colspan="8" class="row-bg">
-                                                        <div>
-                                                            <div class="d-flex justify-content-between">
-                                                                <div class="cell-hilighted">
-                                                                    <div class="d-flex mb-2">
-                                                                        <div class="mr-2 min-width-cell">
-                                                                            <p>Policy start date</p>
-                                                                            <h6>25/04/2020</h6>
-                                                                        </div>
-                                                                        <div class="min-width-cell">
-                                                                            <p>Policy end date</p>
-                                                                            <h6>24/04/2021</h6>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="d-flex">
-                                                                        <div class="mr-2 min-width-cell">
-                                                                            <p>Sum insured</p>
-                                                                            <h5>$26,000</h5>
-                                                                        </div>
-                                                                        <div class="min-width-cell">
-                                                                            <p>Premium</p>
-                                                                            <h5>$1200</h5>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="expanded-table-normal-cell">
-                                                                    <div class="mr-2 mb-4">
-                                                                        <p>Quote no.</p>
-                                                                        <h6>Incs234</h6>
-                                                                    </div>
-                                                                    <div class="mr-2">
-                                                                        <p>Vehicle Reg. No.</p>
-                                                                        <h6>KL-65-A-7004</h6>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="expanded-table-normal-cell">
-                                                                    <div class="mr-2 mb-4">
-                                                                        <p>Policy number</p>
-                                                                        <h6>Incsq123456</h6>
-                                                                    </div>
-                                                                    <div class="mr-2">
-                                                                        <p>Policy number</p>
-                                                                        <h6>Incsq123456</h6>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="expanded-table-normal-cell">
-                                                                    <div class="mr-2 mb-3 d-flex">
-                                                                        <div class="highlighted-alpha"> A</div>
-                                                                        <div>
-                                                                            <p>Agent / Broker</p>
-                                                                            <h6>Abcd Enterprices</h6>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="mr-2 d-flex"> 
-                                                                        <img src="../../images/faces/face5.jpg" alt="profile"/>
-                                                                        <div>
-                                                                            <p>Policy holder Name & ID Number</p>
-                                                                            <h6>Phillip Harris / 1234567</h6>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="expanded-table-normal-cell">
-                                                                    <div class="mr-2 mb-4">
-                                                                        <p>Branch</p>
-                                                                        <h6>Koramangala, Bangalore</h6>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="expanded-table-normal-cell">
-                                                                    <div class="mr-2 mb-4">
-                                                                        <p>Channel</p>
-                                                                        <h6>Online</h6>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                            </table>
+                                        <td>{{$item->description}}</td>
+                                        <td>{{$item->imagen}}</td>
+                                        <td style="width: 250px;">
+                                            <button class="btn btn-info py-2">Ver</button>  
+                                            <button class="btn btn-primary py-2">Editar</button>              
+                                            <button class="btn btn-secondary py-2">Eliminar</button>                               
                                         </td>
                                     </tr>
                                     @endforeach
@@ -306,19 +227,94 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-6 grid-margin stretch-card">
-                    <div class="card">
+                <div class="col-md-12 grid-margin stretch-card">
+                    <div class="card position-relative">
                         <div class="card-body">
-                        <h4 class="card-title">Registros</h4>
-                        <canvas id="barChart"></canvas>
+                        <div id="detailedReports" class="carousel slide detailed-report-carousel position-static pt-2" data-ride="carousel">
+                            <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="row">
+                                <div class="col-md-12 col-xl-3 d-flex flex-column justify-content-start">
+                                    <div class="ml-xl-4 mt-3">
+                                    <p class="card-title">Informe Detallado</p>
+                                    <h1 class="text-primary">{{$juegos->count()}}</h1>
+                                    <h3 class="font-weight-500 mb-xl-4 text-primary">Juegos</h3>
+                                    <p class="mb-2 mb-xl-0">
+                                        El número total de sesiones dentro del rango de fechas. Es el período en el que un usuario participa activamente en su sitio web, página o aplicación, etc.</p>
+                                    </div>  
+                                    </div>
+                                <div class="col-md-12 col-xl-9">
+                                    <div class="row">
+                                    <div class="col-md-6 border-right">
+                                        <div class="table-responsive mb-3 mb-md-0 mt-3">
+                                        <table class="table table-borderless report-table">
+                                            <tr>
+                                            <td class="text-muted">Ajedrez</td>
+                                            <td class="w-100 px-0">
+                                                <div class="progress progress-md mx-4">
+                                                <div class="progress-bar bg-primary" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+                                            </td>
+                                            <td><h5 class="font-weight-bold mb-0">S/. 713</h5></td>
+                                            </tr>
+                                            <tr>
+                                            <td class="text-muted">Damas</td>
+                                            <td class="w-100 px-0">
+                                                <div class="progress progress-md mx-4">
+                                                <div class="progress-bar bg-warning" role="progressbar" style="width: 30%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+                                            </td>
+                                            <td><h5 class="font-weight-bold mb-0">S/. 583</h5></td>
+                                            </tr>
+                                            <tr>
+                                            <td class="text-muted">Bingo</td>
+                                            <td class="w-100 px-0">
+                                                <div class="progress progress-md mx-4">
+                                                <div class="progress-bar bg-danger" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+                                            </td>
+                                            <td><h5 class="font-weight-bold mb-0">S/. 924</h5></td>
+                                            </tr>
+                                            <tr>
+                                            <td class="text-muted">Serpiente</td>
+                                            <td class="w-100 px-0">
+                                                <div class="progress progress-md mx-4">
+                                                <div class="progress-bar bg-info" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+                                            </td>
+                                            <td><h5 class="font-weight-bold mb-0">S/. 664</h5></td>
+                                            </tr>
+                                            <tr>
+                                            <td class="text-muted">Ludo</td>
+                                            <td class="w-100 px-0">
+                                                <div class="progress progress-md mx-4">
+                                                <div class="progress-bar bg-primary" role="progressbar" style="width: 40%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+                                            </td>
+                                            <td><h5 class="font-weight-bold mb-0">S/. 560</h5></td>
+                                            </tr>
+                                            <tr>
+                                            <td class="text-muted">Ocho Loco</td>
+                                            <td class="w-100 px-0">
+                                                <div class="progress progress-md mx-4">
+                                                <div class="progress-bar bg-danger" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+                                            </td>
+                                            <td><h5 class="font-weight-bold mb-0">S/. 793</h5></td>
+                                            </tr>
+                                        </table>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 mt-3">
+                                        <canvas id="north-america-chart"></canvas>
+                                        <div id="north-america-legend"></div>
+                                    </div>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 grid-margin stretch-card">
-                    <div class="card">
-                        <div class="card-body">
-                        <h4 class="card-title">Pie chart</h4>
-                        <canvas id="pieChart"></canvas>
                         </div>
                     </div>
                 </div>
