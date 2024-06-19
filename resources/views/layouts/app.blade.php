@@ -68,6 +68,7 @@
         <script src="js/dashboard.js"></script>
         <script src="js/Chart.roundedBarCharts.js"></script>
         <script src="js/chart.js"></script>
+        <script src="js/indicadores.js"></script>
         <!-- End custom js for this page-->
     </body>
 </html>

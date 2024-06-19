@@ -39,7 +39,7 @@
         </a>
         <div class="collapse" id="charts">
             <ul class="nav flex-column sub-menu">
-            <li class="nav-item"> <a class="nav-link" href="pages/charts/chartjs.html">ChartJs</a></li>
+            <li class="nav-item"> <a class="nav-link" href="/ventas">Ventas</a></li>
             </ul>
         </div>
         </li>
@@ -63,7 +63,7 @@
         </a>
         <div class="collapse" id="icons">
             <ul class="nav flex-column sub-menu">
-            <li class="nav-item"> <a class="nav-link" href="pages/icons/mdi.html">Mdi icons</a></li>
+            <li class="nav-item"> <a class="nav-link" href="/comisiones">Comisiones</a></li>
             </ul>
         </div>
         </li>

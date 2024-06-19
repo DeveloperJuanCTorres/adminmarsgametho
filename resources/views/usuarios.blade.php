@@ -206,7 +206,7 @@
                                         <td>{{$item->telefono}}</td>
                                         <td>{{$item->email}}</td>
                                         <td>
-                                            <a class="btn btn-primary" data-toggle="collapse" href="#collapse{{$key}}" role="button" aria-expanded="false" aria-controls="collapse{{$key}}">
+                                            <a class="btn btn-primary py-2" data-toggle="collapse" href="#collapse{{$key}}" role="button" aria-expanded="false" aria-controls="collapse{{$key}}">
                                                 Detalle
                                             </a>                                            
                                         </td>

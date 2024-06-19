@@ -1,5 +1,5 @@
 <x-app-layout>
-    <div class="container-fluid page-body-wrapper">
+    <div class="container-fluid page-body-wrapper">        
         <x-menu/>
         <!-- partial -->
         <div class="main-panel">
@@ -9,11 +9,7 @@
                 <div class="col-md-12 grid-margin stretch-card">
                 <div class="card">
                     <div class="card-body">
-                    <p class="card-title">Lista de Juegos</p>
-                    <div>
-                        <button class="btn btn-primary" style="float: right;margin-top: -50px;">Añadir</button>
-                    </div>
-                    
+                    <p class="card-title">Lista de Ventas</p>                    
                     <div class="row">
                         <div class="col-12">
                         <div class="table-responsive">
@@ -21,31 +17,31 @@
                                 <thead>
                                     <tr>
                                     <th>Id</th>
-                                    <th>Juego</th>
-                                    <th>Descripcion</th>
-                                    <th>Imagen</th>
+                                    <th>Usuario</th>
+                                    <th>Email</th>
+                                    <th>Monto</th>
                                     <th>Opciones</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @if($juegos->count()==0)
+                                    <!-- if($juegos->count()==0) -->
                                     <tr>
                                         <td colspan="5" class="text-center">No hay datos registrados</td>
                                     </tr>
-                                    @endif
-                                    @foreach($juegos as $key => $item)                                    
+                                    <!-- endif -->
+                                    <!-- foreach($juegos as $key => $item)                                    
                                     <tr>
-                                        <td>{{$item->id}}</td>
-                                        <td>{{$item->name}}</td>
-                                        <td>{{$item->description}}</td>
-                                        <td>{{$item->imagen}}</td>
+                                        <td>$item->id</td>
+                                        <td>$item->name</td>
+                                        <td>$item->description</td>
+                                        <td>$item->imagen</td>
                                         <td style="width: 250px;">
                                             <button class="btn btn-info py-2">Ver</button>  
                                             <button class="btn btn-primary py-2">Editar</button>              
                                             <button class="btn btn-secondary py-2">Eliminar</button>                               
                                         </td>
                                     </tr>
-                                    @endforeach
+                                    endforeach -->
                                 </tbody>
                             </table>
                         </div>
@@ -66,10 +62,10 @@
                                 <div class="col-md-12 col-xl-3 d-flex flex-column justify-content-start">
                                     <div class="ml-xl-4 mt-3">
                                     <p class="card-title">Informe Detallado</p>
-                                    <h1 class="text-primary">{{$juegos->count()}}</h1>
-                                    <h3 class="font-weight-500 mb-xl-4 text-primary">Juegos</h3>
+                                    <h1 class="text-primary">S/. 2,000</h1>
+                                    <h3 class="font-weight-500 mb-xl-4 text-primary">en Total</h3>
                                     <p class="mb-2 mb-xl-0">
-                                        El número total de sesiones dentro del rango de fechas. Es el período en el que un usuario participa activamente en su sitio web, página o aplicación, etc.</p>
+                                        El total de ventas hasta la fecha.</p>
                                     </div>  
                                     </div>
                                 <div class="col-md-12 col-xl-9">
@@ -78,7 +74,7 @@
                                         <div class="table-responsive mb-3 mb-md-0 mt-3">
                                         <table class="table table-borderless report-table">
                                             <tr>
-                                            <td class="text-muted">Ajedrez</td>
+                                            <td class="text-muted">Lima</td>
                                             <td class="w-100 px-0">
                                                 <div class="progress progress-md mx-4">
                                                 <div class="progress-bar bg-primary" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
@@ -87,7 +83,7 @@
                                             <td><h5 class="font-weight-bold mb-0">S/. 713</h5></td>
                                             </tr>
                                             <tr>
-                                            <td class="text-muted">Damas</td>
+                                            <td class="text-muted">La Livertad</td>
                                             <td class="w-100 px-0">
                                                 <div class="progress progress-md mx-4">
                                                 <div class="progress-bar bg-warning" role="progressbar" style="width: 30%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
@@ -96,7 +92,7 @@
                                             <td><h5 class="font-weight-bold mb-0">S/. 583</h5></td>
                                             </tr>
                                             <tr>
-                                            <td class="text-muted">Bingo</td>
+                                            <td class="text-muted">Lambayeque</td>
                                             <td class="w-100 px-0">
                                                 <div class="progress progress-md mx-4">
                                                 <div class="progress-bar bg-danger" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
@@ -105,7 +101,7 @@
                                             <td><h5 class="font-weight-bold mb-0">S/. 924</h5></td>
                                             </tr>
                                             <tr>
-                                            <td class="text-muted">Serpiente</td>
+                                            <td class="text-muted">Callao</td>
                                             <td class="w-100 px-0">
                                                 <div class="progress progress-md mx-4">
                                                 <div class="progress-bar bg-info" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
@@ -114,7 +110,7 @@
                                             <td><h5 class="font-weight-bold mb-0">S/. 664</h5></td>
                                             </tr>
                                             <tr>
-                                            <td class="text-muted">Ludo</td>
+                                            <td class="text-muted">Piura</td>
                                             <td class="w-100 px-0">
                                                 <div class="progress progress-md mx-4">
                                                 <div class="progress-bar bg-primary" role="progressbar" style="width: 40%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
@@ -123,7 +119,7 @@
                                             <td><h5 class="font-weight-bold mb-0">S/. 560</h5></td>
                                             </tr>
                                             <tr>
-                                            <td class="text-muted">Ocho Loco</td>
+                                            <td class="text-muted">Cajamarca</td>
                                             <td class="w-100 px-0">
                                                 <div class="progress progress-md mx-4">
                                                 <div class="progress-bar bg-danger" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
@@ -135,8 +131,8 @@
                                         </div>
                                     </div>
                                     <div class="col-md-6 mt-3">
-                                        <canvas id="north-america-chart"></canvas>
-                                        <div id="north-america-legend"></div>
+                                        <canvas id="ventas-tipo-plan"></canvas>
+                                        <div id="ventas-tipo-plan-legend"></div>
                                     </div>
                                     </div>
                                 </div>
